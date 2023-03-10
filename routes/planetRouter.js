@@ -1,7 +1,7 @@
 import { Router } from "express";
 const router = Router();
 
-import { getPlanets, getRandomPlanet, searchPlanet } from "../models/planetMods";
+import { getPlanets, getRandomPlanet, searchPlanet } from "../models/planetMods.js";
 
 router.get("/", async function (req, res) {
     console.log ("got to router!")

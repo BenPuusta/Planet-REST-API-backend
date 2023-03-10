@@ -29,9 +29,8 @@ async function searchPlanet(searchTerm){
       
 }
 
-export default {
+export {
     getPlanets,
     getRandomPlanet,
-    searchPlanet,
-
+    searchPlanet
   };
