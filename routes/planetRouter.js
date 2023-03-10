@@ -1,11 +1,7 @@
-const express = require("express");
-const router = express.Router();
+import { Router } from "express";
+const router = Router();
 
-const {
-     getPlanets,
-     getRandomPlanet,
-     searchPlanet,
-  } = require("../models/planetMods");
+import { getPlanets, getRandomPlanet, searchPlanet } from "../models/planetMods";
 
 router.get("/", async function (req, res) {
     console.log ("got to router!")
@@ -27,4 +23,4 @@ router.get("/", async function (req, res) {
    })
 
 
-   module.exports = router;
+   export default router;

@@ -1,7 +1,1 @@
-{
-  "dependencies": {
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "morgan": "^1.10.0"
-  }
-}
+{"type":"module","scripts":{"start":"node -r dotenv/config app.js","dev":"nodemon -r dotenv/config app.js"},"dependencies":{"dotenv":"^16.0.3","express":"^4.18.2","morgan":"^1.10.0","nodemon":"^2.0.21"}}

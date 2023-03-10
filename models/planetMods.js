@@ -1,4 +1,4 @@
-const { query } = require("../db/index.js");
+import { query } from "../db/index.js";
 
 async function getPlanets(question) {
 
@@ -29,7 +29,7 @@ async function searchPlanet(searchTerm){
       
 }
 
-module.exports = {
+export default {
     getPlanets,
     getRandomPlanet,
     searchPlanet,
