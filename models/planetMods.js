@@ -12,10 +12,11 @@ async function getPlanets(question) {
 }
 
 async function getRandomPlanet (){
-  randNum = Math.floor((Math.random() * 8) +1 );
+  console.log ("Got to random planet function")
+  let randNum = Math.floor((Math.random() * 8) +1 );
   console.log (randNum)
      const randomPlanet = await query(
-        `SELECT * FROM planets WHERE id = ${randNum}`
+        `SELECT * FROM planets WHERE planet_id = ${randNum}`
     )
     return randomPlanet.rows
 }
