@@ -2,7 +2,8 @@
   "type": "module",
   "scripts": {
     "start": "node -r dotenv/config app.js",
-    "dev": "nodemon -r dotenv/config app.js"
+    "dev": "nodemon -r dotenv/config app.js",
+    "build": "npm run clean && npm run compile"
   },
   "dependencies": {
     "cors": "^2.8.5",
