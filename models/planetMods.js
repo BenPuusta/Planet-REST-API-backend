@@ -21,13 +21,19 @@ async function getRandomPlanet (){
     return randomPlanet.rows
 }
 
-async function searchPlanet(searchTerm){
-    console.log ("got to function")
-    const result = await query( 
-        `SELECT * FROM planets 
-        WHERE planet = $1`, [searchTerm])
-     return  result.rows;
-      
+
+async function searchPlanet(searchTerm) {
+
+  try {
+    const result = await query(
+      `SELECT * FROM planets WHERE planet_name ILIKE '%' || $1 || '%'`,
+      [searchTerm]
+    );
+    return result.rows;
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
 }
 
 export {

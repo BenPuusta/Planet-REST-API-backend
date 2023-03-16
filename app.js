@@ -11,7 +11,7 @@ import planetRouter from "./routes/planetRouter.js"
 
 
 const app = express();
-const PORT = process.env.port || 3500;
+const PORT = process.env.PORT || 3500;
 
 
 
