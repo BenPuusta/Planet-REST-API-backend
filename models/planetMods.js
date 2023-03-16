@@ -1,5 +1,8 @@
 import { query } from "../db/index.js";
 
+
+
+
 async function getPlanets(question) {
 
 
@@ -29,10 +32,12 @@ async function searchPlanet(searchTerm) {
       `SELECT * FROM planets WHERE planet_name ILIKE '%' || $1 || '%'`,
       [searchTerm]
     );
+    console.log (result.rows)
+
     return result.rows;
   } catch (error) {
     console.error(error);
-    return [];
+    return []
   }
 }
 
